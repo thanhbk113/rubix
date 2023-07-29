@@ -73,8 +73,8 @@ export default function Header() {
   };
 
   return (
-    <header className='sticky top-0 z-40 flex h-24 w-full min-w-[90%] items-center justify-around bg-white  py-5 font-normal sm:px-sm lg:justify-between xl:px-xl'>
-      <div className='flex gap-4 lg:hidden'>
+    <header className='sticky top-0 z-40 flex h-24 w-full min-w-[90%] items-center justify-around bg-white py-5  font-normal shadow-lg md:px-sm lg:justify-between xl:px-xl'>
+      <div className='ml-5 flex gap-4 lg:hidden'>
         <IconButton onClick={handleDrawerOpen}>
           <MenuIcon className='cursor-pointer' />
         </IconButton>
@@ -88,10 +88,18 @@ export default function Header() {
           alt='Ribix'
         />
       </Link>
+
       <MenuList className=' hidden min-w-[600px] items-center justify-evenly gap-10 lg:flex'>
         {links.map(({ href, label }) => (
           <li key={`${href}${label}`}>
-            <Link href={href} className=' flex hover:text-yellow-300'>
+            <Link
+              href={href}
+              className={`${
+                router.asPath === href
+                  ? 'font-medium text-[red] underline underline-offset-8'
+                  : ''
+              } flex hover:text-yellow-300`}
+            >
               <span className='w-full'>{label}</span>
             </Link>
           </li>
@@ -181,13 +189,13 @@ export default function Header() {
         )}
         {!session ? (
           <ul className='flex min-w-[170px] items-center justify-center'>
-            <li className='pr-1 hover:text-yellow-300 xl:block'>
+            <li className='text-sm hover:text-yellow-300 md:pr-1 md:text-lg xl:block'>
               <Link onClick={() => dispatch(login())} href='/login'>
                 Đăng nhập
               </Link>
             </li>
             <li className=' xl:block'>/</li>
-            <li className=' pl-1 pr-6 hover:text-yellow-300 xl:block'>
+            <li className=' pl-1 pr-6 text-sm hover:text-yellow-300 md:text-lg xl:block'>
               <Link onClick={() => dispatch(register())} href='/signup'>
                 Đăng ký
               </Link>
