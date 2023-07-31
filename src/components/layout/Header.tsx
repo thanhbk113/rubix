@@ -76,7 +76,7 @@ export default function Header() {
     <header className='sticky top-0 z-40 flex h-24 w-full min-w-[90%] items-center justify-around bg-white  py-5 font-normal shadow-lg sm:px-sm lg:justify-between xl:px-xl'>
       <div className='flex items-center gap-0 px-2 md:gap-3 lg:hidden'>
         <IconButton onClick={handleDrawerOpen}>
-          <AiOutlineMenu className='cursor-pointer pl-5' size='50px' />
+          <AiOutlineMenu className=' cursor-pointer' size='35px' />
         </IconButton>
         <SearchHeader />
       </div>
