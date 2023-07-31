@@ -18,12 +18,12 @@ const Auth: NextPage<LoginProps> & WithLayout = ({ children }) => {
   return (
     <div className='flex h-[800px] flex-col items-center justify-center gap-0 bg-background-login bg-cover bg-no-repeat'>
       <div className='bg-opacity-7 bgo  flex w-full flex-col items-center gap-2 p-14 text-center text-white '>
-        <h3 className='text-2xl font-black lg:text-4xl '>
-          Welcome to{' '}
-          <h3 className='inline text-3xl font-black text-[#00FF00] lg:text-5xl'>
+        <div className='flex items-center gap-2'>
+          <h3 className='text-2xl font-black lg:text-4xl '>Welcome to</h3>
+          <h3 className='mb-2 inline text-3xl font-black text-[#00FF00] lg:text-5xl'>
             Rubix
           </h3>
-        </h3>
+        </div>
         <h2 className='w-[100%] text-sm font-black  md:text-lg lg:text-2xl'>
           Trang web cung cấp thực phẩm tươi sống mới nổi !!!
         </h2>
