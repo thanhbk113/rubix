@@ -9,7 +9,7 @@ interface PropsBgBanner {
 
 const BgBanner: FC<PropsBgBanner> = (props) => {
   return (
-    <div className='relative'>
+    <div className='relative border-b border-gray-400 '>
       <NextImage
         width={2000}
         height={1000}

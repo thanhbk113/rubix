@@ -1,6 +1,6 @@
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Link from 'next/link';
 import { FC } from 'react';
+import { MdArrowForwardIos } from 'react-icons/md';
 
 import { ISwiper } from '@/data';
 
@@ -10,7 +10,7 @@ const ItemSwiper: FC<ISwiper> = (item) => {
   return (
     <div className='swiper-slide-active relative h-full w-full animate-opacity'>
       <NextImage
-        className='h-full w-full opacity-40 lg:opacity-100'
+        className='h-full w-full sm:opacity-40 lg:opacity-100'
         width={2000}
         height={900}
         src={item.image}
@@ -29,10 +29,11 @@ const ItemSwiper: FC<ISwiper> = (item) => {
         </h1>
         <Link
           href='/collections/all'
-          className='slider-button absolute mb-14 animate-arrow-top rounded-md bg-black py-[14px]  px-8 text-white transition-all hover:bg-amber-400 lg:mb-0'
+          className='slider-button absolute mb-14 flex animate-arrow-top items-center justify-center gap-2 rounded-md  bg-black py-[14px] px-8 text-white transition-all hover:bg-amber-400 lg:mb-0'
         >
-          <span className='font-semibold'>Bắt đầu mua hàng</span>
-          <KeyboardArrowRightIcon />
+          <span className='mb-1 font-semibold'>Bắt đầu mua hàng</span>
+
+          <MdArrowForwardIos />
         </Link>
       </div>
     </div>

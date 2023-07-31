@@ -16,7 +16,7 @@ const Auth: NextPage<LoginProps> & WithLayout = ({ children }) => {
   const isChoose = useAppSelector(selectIsChoose);
 
   return (
-    <div className=' flex h-[800px] flex-col items-center justify-center gap-0 bg-background-login bg-cover bg-no-repeat'>
+    <div className='flex h-[800px] flex-col items-center justify-center gap-0 bg-background-login bg-cover bg-no-repeat'>
       <div className='bg-opacity-7 bgo  flex w-full flex-col items-center gap-2 p-14 text-center text-white '>
         <h3 className='text-2xl font-black lg:text-4xl '>
           Welcome to{' '}

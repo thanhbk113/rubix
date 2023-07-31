@@ -60,7 +60,7 @@ const PoperFilterCategories: React.FC<ProductCategoriesProps> = ({
         onClose={handleClose}
         onClick={handleClose}
       >
-        <div className='border-b px-4 py-1'>
+        <div className='border-b  py-1 px-4'>
           <h4 className='mb-10'>Danh mục sản phẩm</h4>
           <ul className='flex w-full flex-col gap-4 '>
             <li

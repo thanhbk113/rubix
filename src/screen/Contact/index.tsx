@@ -78,9 +78,8 @@ const Contact: WithLayout = () => {
   return (
     <div>
       <BgBanner nav='Liên hệ' />
-
       <iframe
-        className='mt-5 h-[800px] w-full'
+        className=' h-[800px] w-full border-y-4 border-blue-600  '
         src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3968632880105!2d106.68045467476645!3d10.780885559112027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2f39e910fb%3A0xe1370884c733c03d!2zMTEzIELDoCBIdXnhu4duIFRoYW5oIFF1YW4sIFbDtSBUaOG7iyBTw6F1LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1690597720438!5m2!1svi!2s'
         width='600'
         height='450'
@@ -88,7 +87,7 @@ const Contact: WithLayout = () => {
         allowFullScreen
       ></iframe>
       <div className='my-3 flex h-auto w-full items-start  justify-center'>
-        <div className='items-centers my-20 h-full max-w-[80%] gap-4 rounded-lg border bg-[#1abc9c] p-7 shadow-xl  lg:flex lg:justify-between lg:gap-10'>
+        <div className='my-20 h-full max-w-[80%] gap-4 rounded-lg border bg-[#1abc9c] p-7 shadow-xl  lg:flex lg:justify-between lg:gap-10'>
           <div className='mb-5 flex flex-1 flex-col gap-6 border-2  border-white px-4 pb-5 pt-7 text-white lg:mb-0 lg:px-8'>
             <h3 className='text-sm font-extrabold text-white md:text-2xl'>
               Liên hệ chúng tôi
@@ -113,13 +112,12 @@ const Contact: WithLayout = () => {
           <div className='border'></div>
           <div className='flex-1 bg-white px-8 py-5'>
             <h3 className='mb-2 py-3'>Bạn cần hỗ trợ ?</h3>
-
             <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
               <RHFTextField
                 name='name'
                 type='text'
                 placeholder='Tên'
-                className=' font-medium hover:border-transparent focus:outline-none'
+                className='hover:border-transparent focus:outline-none'
               />
               <RHFTextField
                 name='email'
