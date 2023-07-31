@@ -113,7 +113,7 @@ export default function Header() {
       >
         <IconButton
           onClick={handleDrawerClose}
-          className='absolute right-1 top-1 cursor-pointer'
+          className='absolute right-1 top-1 cursor-pointer text-right'
         >
           <RiCloseCircleFill />
         </IconButton>
