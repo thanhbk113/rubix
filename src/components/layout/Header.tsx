@@ -73,25 +73,33 @@ export default function Header() {
   };
 
   return (
-    <header className='sticky top-0 z-40 flex h-24 w-full min-w-[90%] items-center justify-around bg-white  py-5 font-normal sm:px-sm lg:justify-between xl:px-xl'>
-      <div className='flex gap-4 lg:hidden'>
+    <header className='sticky top-0 z-40 flex h-24 w-full min-w-[90%] items-center justify-around bg-white  py-5 font-normal shadow-lg sm:px-sm lg:justify-between xl:px-xl'>
+      <div className='flex items-center gap-0 px-2 md:gap-3 lg:hidden'>
         <IconButton onClick={handleDrawerOpen}>
-          <AiOutlineMenu className='cursor-pointer' />
+          <AiOutlineMenu className='cursor-pointer pl-5' size='50px' />
         </IconButton>
         <SearchHeader />
       </div>
-      <Link href='/'>
+      <Link href='/' className='mr-2'>
         <NextImage
           src='/images/logo_black.png'
           width={130}
           height={24}
           alt='Ribix'
+          className='text-lg md:text-2xl'
         />
       </Link>
       <MenuList className=' hidden min-w-[600px] items-center justify-evenly gap-10 lg:flex'>
         {links.map(({ href, label }) => (
           <li key={`${href}${label}`}>
-            <Link href={href} className=' flex hover:text-yellow-300'>
+            <Link
+              href={href}
+              className={`${
+                router.asPath === href
+                  ? 'font-medium text-[red] underline underline-offset-8'
+                  : ''
+              } flex hover:text-yellow-300`}
+            >
               <span className='w-full'>{label}</span>
             </Link>
           </li>
@@ -118,12 +126,16 @@ export default function Header() {
             className='mx-auto mt-12'
           />
         </Link>
-        <MenuList className=' m-6 mt-10 min-w-[300px] flex-col items-center justify-center gap-10'>
+        <MenuList className='m-6 mt-10 min-w-[300px] flex-col items-center justify-center gap-10'>
           {links.map(({ href, label }) => (
             <MenuItem
               key={`${href}${label}`}
               onClick={() => handleNavigate(href)}
-              className='flex p-3 hover:text-yellow-300'
+              className={`${
+                router.asPath === href
+                  ? ' font-medium text-[red] underline underline-offset-8'
+                  : ''
+              } flex hover:text-yellow-300`}
             >
               <Link href={href}>
                 <span className='w-full'>{label}</span>
@@ -181,13 +193,13 @@ export default function Header() {
         )}
         {!session ? (
           <ul className='flex min-w-[170px] items-center justify-center'>
-            <li className='pr-1 hover:text-yellow-300 xl:block'>
+            <li className='pr-1 text-sm hover:text-yellow-300 md:text-[16px] xl:block'>
               <Link onClick={() => dispatch(login())} href='/login'>
                 Đăng nhập
               </Link>
             </li>
             <li className=' xl:block'>/</li>
-            <li className=' pl-1 pr-6 hover:text-yellow-300 xl:block'>
+            <li className='pl-1 pr-6 text-sm hover:text-yellow-300 md:text-[16px] xl:block'>
               <Link onClick={() => dispatch(register())} href='/signup'>
                 Đăng ký
               </Link>
