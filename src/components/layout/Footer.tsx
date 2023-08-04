@@ -71,7 +71,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className='w-full bg-footer-bg bg-cover text-white'>
+    <footer className='w-full bg-background-footer bg-cover text-white'>
       <div className='flex w-full flex-col px-sm pt-[70px] pb-10  sm:grid sm:grid-cols-2 md:grid-cols-4 lg:gap-0 xl:px-xl '>
         <div className='mt-[6px]  flex flex-col'>
           <Link href='/'>

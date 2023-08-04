@@ -94,8 +94,8 @@ module.exports = {
       backgroundImage: {
         'background-home':
           "url('https://cdn.shopify.com/s/files/1/0376/9440/6700/files/newsletter-bg.jpg?v=1629543119&fbclid=IwAR2e9wGtb3uV_AbVs768Jf2vHNPqPpnSIHqtEpGcng8hsFhguzqeUM3LCCk')",
-        'footer-bg': 
-          "url('/images/footerbg.jpg')",
+        'background-footer': 
+          "url('https://raw.githubusercontent.com/ThuongDoo/images/0d0a7d10bf1dca86e3ab845f73282af40f9525a5/footerbg.jpg')",
       },
     },
   },
