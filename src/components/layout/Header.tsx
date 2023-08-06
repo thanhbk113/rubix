@@ -85,10 +85,10 @@ export default function Header() {
           src='/images/logo_black.png'
           width={130}
           height={24}
-          alt='Ribix'
+          alt='Rubix'
         />
       </Link>
-      <MenuList className=' hidden min-w-[600px] items-center justify-evenly gap-10 lg:flex'>
+      <MenuList className=' hidden min-w-[500px] items-center justify-evenly gap-10 lg:flex'>
         {links.map(({ href, label }) => (
           <li key={`${href}${label}`}>
             <Link

@@ -135,6 +135,7 @@ const Contact: WithLayout = () => {
           </FormProvider>
         </div>
       </div>
+      {/* <img src='images/ContactBGBG.jpg' className='absolute' /> */}
     </div>
   );
 };
